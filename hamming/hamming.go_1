@@ -1,0 +1,28 @@
+// Package hamming calculates the Hamming distance between two DNA strands
+package hamming
+
+import (
+	"errors"
+)
+
+// Distance delivers the distance number between two DNA strands
+func Distance(a, b string) (c int, d error) {
+	var j int = 0
+
+	ar := []rune(a)
+	br := []rune(b)
+
+	if len(ar) != len(br) {
+		return 0, errors.New("true")
+	} else if a == b {
+		return 0, d
+	} else {
+		for n := 0; n < len(a); n++ {
+			ar, br := []rune(a), []rune(b)
+			if ar[n] != br[n] {
+				j++
+			}
+		}
+		return j, d
+	}
+}

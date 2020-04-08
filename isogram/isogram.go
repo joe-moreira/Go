@@ -1,0 +1,5 @@
+package isogram
+
+func IsIsogram() {
+
+}
